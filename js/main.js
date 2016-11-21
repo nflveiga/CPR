@@ -94,19 +94,32 @@ text.anchor.setTo(0.5, 0);
   }
 };
 function counterFunction(){
+timerText="";
   if(!startTime){
     startTime=new Date().getTime();
   }
   else{
     stopTime=new Date().getTime();
     compressionTimer=stopTime-startTime;
+    if(compressionCount>1){
+        if(compressionTimer<500){
+            timerText="Too fast!"
+        }
+        else if(compressionTimer>500 && compressionTimer<600){
+            timerText="Good Rithm!"
+        }
+        else if(compressionTimer>600){
+            timerText="Too slow!"
+        }
+    };
     if(compressionTimer>2000){
       compressionCount=0;
     }
+        
+    }
     startTime=new Date().getTime();
-  }
   compressionCount++;
-  text.setText("- You have pushed -\n" + compressionCount + " times !\n" + compressionTimer);
+  text.setText("- You have pushed -\n" + compressionCount + " times !\n" + timerText);
 };
 
 game.state.add('GameState', GameState);
