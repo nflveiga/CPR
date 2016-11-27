@@ -1,68 +1,44 @@
 {"frames": [
 
 {
-	"filename": "victim.png",
-	"frame": {"x":1,"y":1,"w":64,"h":28},
+	"filename": "vitima30000.png",
+	"frame": {"x":1,"y":1,"w":29,"h":8},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":36,"w":64,"h":28},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":0,"y":8,"w":29,"h":8},
+	"sourceSize": {"w":32,"h":16}
 },
 {
-	"filename": "victimCompressed.png",
-	"frame": {"x":1,"y":31,"w":64,"h":28},
+	"filename": "vitima200000000.png",
+	"frame": {"x":32,"y":1,"w":29,"h":8},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":36,"w":64,"h":28},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":0,"y":8,"w":29,"h":8},
+	"sourceSize": {"w":32,"h":16}
 },
 {
-	"filename": "victimHE.png",
-	"frame": {"x":1,"y":61,"w":64,"h":30},
+	"filename": "vitima400000000.png",
+	"frame": {"x":63,"y":1,"w":29,"h":8},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":34,"w":64,"h":30},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":0,"y":8,"w":29,"h":8},
+	"sourceSize": {"w":32,"h":16}
 },
 {
-	"filename": "victimHEinfl.png",
-	"frame": {"x":1,"y":93,"w":64,"h":33},
+	"filename": "vitima500000000.png",
+	"frame": {"x":94,"y":1,"w":29,"h":8},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":31,"w":64,"h":33},
-	"sourceSize": {"w":64,"h":64}
-},
-{
-	"filename": "victimHEinfl2.png",
-	"frame": {"x":1,"y":128,"w":64,"h":33},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":31,"w":64,"h":33},
-	"sourceSize": {"w":64,"h":64}
-},
-{
-	"filename": "victiminflnotex.png",
-	"frame": {"x":1,"y":163,"w":64,"h":36},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":28,"w":64,"h":36},
-	"sourceSize": {"w":64,"h":64}
-},
-{
-	"filename": "victiminflnotex2.png",
-	"frame": {"x":1,"y":201,"w":64,"h":34},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":30,"w":64,"h":34},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":0,"y":8,"w":29,"h":8},
+	"sourceSize": {"w":32,"h":16}
 }],
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "victimspritesheet.png",
 	"format": "RGBA8888",
-	"size": {"w":66,"h":236},
+	"size": {"w":124,"h":10},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:d442c174fcc9a6515a6f781b1908ad92:3393a19d24fee88b76e848c3f07f4fa4:affaff6347612c93897fa28698c7911e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:305cc86ccce09f03306284fbb76fe947:4126b23d81dad51cc8826445480da46f:affaff6347612c93897fa28698c7911e$"
 }
 }

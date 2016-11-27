@@ -1,76 +1,124 @@
 {"frames": [
 
 {
-	"filename": "newguy.png",
-	"frame": {"x":1,"y":1,"w":33,"h":64},
+	"filename": "image.png",
+	"frame": {"x":1,"y":1,"w":12,"h":26},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":16,"y":0,"w":33,"h":64},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":2,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguycomp1.png",
-	"frame": {"x":1,"y":397,"w":33,"h":56},
+	"filename": "imagecompress0000.png",
+	"frame": {"x":15,"y":1,"w":8,"h":19},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":16,"y":8,"w":33,"h":56},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":13,"w":8,"h":19},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguycomp2.png",
-	"frame": {"x":1,"y":455,"w":33,"h":52},
+	"filename": "imageknee.png",
+	"frame": {"x":25,"y":1,"w":8,"h":21},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":16,"y":12,"w":33,"h":52},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":11,"w":8,"h":21},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguyleft2.png",
-	"frame": {"x":1,"y":67,"w":33,"h":64},
+	"filename": "imagekneeambu0000.png",
+	"frame": {"x":35,"y":1,"w":8,"h":21},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":15,"y":0,"w":33,"h":64},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":11,"w":8,"h":21},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguyleft3.png",
-	"frame": {"x":1,"y":133,"w":33,"h":64},
+	"filename": "imagekneeambu20000.png",
+	"frame": {"x":45,"y":1,"w":8,"h":21},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":15,"y":0,"w":33,"h":64},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":11,"w":8,"h":21},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguyright2.png",
-	"frame": {"x":1,"y":199,"w":33,"h":64},
+	"filename": "imagekneecheckbreath0000.png",
+	"frame": {"x":55,"y":1,"w":8,"h":15},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":16,"y":0,"w":33,"h":64},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":17,"w":8,"h":15},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguyright3.png",
-	"frame": {"x":1,"y":265,"w":33,"h":64},
+	"filename": "imagew100000000.png",
+	"frame": {"x":65,"y":1,"w":12,"h":26},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":16,"y":0,"w":33,"h":64},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
 },
 {
-	"filename": "newguyzknee.png",
-	"frame": {"x":1,"y":331,"w":33,"h":64},
+	"filename": "imagew200000000.png",
+	"frame": {"x":79,"y":1,"w":12,"h":26},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":16,"y":0,"w":33,"h":64},
-	"sourceSize": {"w":64,"h":64}
+	"spriteSourceSize": {"x":4,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
+},
+{
+	"filename": "imagew300000000.png",
+	"frame": {"x":93,"y":1,"w":11,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":11,"h":26},
+	"sourceSize": {"w":16,"h":32}
+},
+{
+	"filename": "imagew400000000.png",
+	"frame": {"x":106,"y":1,"w":12,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
+},
+{
+	"filename": "imagewl400000000.png",
+	"frame": {"x":120,"y":1,"w":12,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
+},
+{
+	"filename": "imagewl1000000000000.png",
+	"frame": {"x":134,"y":1,"w":12,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
+},
+{
+	"filename": "imagewl2000000000000.png",
+	"frame": {"x":148,"y":1,"w":12,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":12,"h":26},
+	"sourceSize": {"w":16,"h":32}
+},
+{
+	"filename": "imagewl3000000000000.png",
+	"frame": {"x":162,"y":1,"w":11,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":11,"h":26},
+	"sourceSize": {"w":16,"h":32}
 }],
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "guyspritesheet.png",
 	"format": "RGBA8888",
-	"size": {"w":35,"h":508},
+	"size": {"w":174,"h":28},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:48863cefaefc525c6ce04c0408914dda:a417845ee57ebc8e99b28790d3813aaf:c1f28a59ea0b12f835d6d8f2982e0f2f$"
+	"smartupdate": "$TexturePacker:SmartUpdate:4116efa129cbb078c6124f583d66e1a7:0244fe2cbb9035ee6f59c2109a7685d0:c1f28a59ea0b12f835d6d8f2982e0f2f$"
 }
 }

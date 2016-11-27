@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "ambu0000.png",
+	"frame": {"x":1,"y":1,"w":8,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":5},
+	"sourceSize": {"w":8,"h":5}
+},
+{
+	"filename": "ambu20000.png",
+	"frame": {"x":11,"y":1,"w":8,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":5},
+	"sourceSize": {"w":8,"h":5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "ambu.png",
+	"format": "RGBA8888",
+	"size": {"w":20,"h":7},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:290b5dc1302d6f7e2559916eeee9346f:28b7d59b40cec8c5ba6474a6ae241e54:075fa462bd650855702cd5dabf570948$"
+}
+}
