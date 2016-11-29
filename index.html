@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 		<title>Learn Game Development at ZENVA.com</title>
+		<script type="text/javascript" src="js/startScreenState.js"></script>
+		<script type="text/javascript" src="js/gameplayState.js"></script>
 		<script type="text/javascript" src="js/phaser.js"></script>
 		<style>
 		  body {
@@ -16,7 +18,15 @@
 	</head>
 
 	<body>
+		<script type="text/javascript">
+var game = new Phaser.Game(640, 360,Phaser.AUTO);
+game.state.add('startScreenState', MyGame.startScreenState);
+game.state.add('gameplayState', MyGame.gameplayState);
+game.state.start('startScreenState');
+
+</script>
+
 		<!-- include the main game file -->
-		<script src="js/main.js"></script>
+		<!--<script src="js/main.js"></script> -->
 	</body>
 </html>

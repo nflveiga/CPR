@@ -1,8 +1,7 @@
-var game = new Phaser.Game(640,360, Phaser.AUTO);
+MyGame.gameplayState = function (game) {
+};
 
-
-
-var GameState={
+MyGame.gameplayState.prototype = {
   init: function(){
 
     this.scale.scaleMode=Phaser.ScaleManager.SHOW_ALL;
@@ -30,6 +29,10 @@ var GameState={
     BREATH_LONG=1200;
     BREATH_SHORT=800;
 
+checkedSafety=false;
+checkedAwake=false;
+checkedBreathing=false;
+calledForHelp=false;
     compressionCount=0;
     compressionCountOK=undefined;
     startTime=undefined;
@@ -52,18 +55,13 @@ var GameState={
   },
   preload: function(){
 
-    game.load.bitmapFont('carrier_command', 'assets/fonts/carrier_command.png', 'assets/fonts/carrier_command.xml');
+    //game.load.bitmapFont('carrier_command', 'assets/fonts/carrier_command.png', 'assets/fonts/carrier_command.xml');
     game.load.atlasJSONArray('pixelguy', 'guyspritesheet.png', 'guyspritesheet.json');
     game.load.atlasJSONArray('victim', 'victimspritesheet.png', 'victimspritesheet.json');
     game.load.atlasJSONArray('ambu', 'ambu.png', 'ambu.json');
     //game.load.image('pixel', 'assets/images/image.png');
     //game.load.image('victim', 'assets/images/vitima.png');
   },
-
-
-
-
-
 
   //CREATE===================================================================================================================================
   create: function(){
@@ -75,8 +73,10 @@ var GameState={
     this.game.physics.arcade.enable(pixelguy)
 
     //animations
-    pixelguy.animations.add('walkright', [6,7,8,9], 4, true);
-    pixelguy.animations.add('walkleft', [10, 11, 12, 13], 4, true);
+    pixelguy.animations.add('walkright', [6,7,8,9], 6, false);
+    pixelguy.animations.add('walkleft', [10, 11, 12, 13], 6, false);
+    pixelguy.animations.add('callHelp', [18,19,18,19,18,18,19,19,18], 4, false);
+    pixelguy.animations.add('checkSafety', [14,14,0,15,15], 6, false);
 
 
     //vitima
@@ -99,6 +99,8 @@ var GameState={
 
 
 
+
+
     //Text
     stateText = game.add.bitmapText(this.game.world.centerX, this.game.world.centerY, 'carrier_command','',34);
     stateText.anchor.setTo(0.5, 0.5);
@@ -112,20 +114,14 @@ text.anchor.setTo(0.5, 0);
     align: "center"
   });
 
-
+//hotKeys
+  this.key1 = game.input.keyboard.addKey(Phaser.Keyboard.ONE);
 
   },
 
-
-
-
-
-
-
-
-
     //UPDATE===================================================================================================================================
   update: function(){
+    pixelguy.animations.currentAnim.onComplete.add(function () {	pixelguy.frame=0;}, this);
     pixelguy.body.velocity.x=0;
 
     if(this.cursors.left.isDown){
@@ -138,14 +134,28 @@ text.anchor.setTo(0.5, 0);
       pixelguy.body.velocity.x=this.WALKING_SPEED;
       pixelguy.animations.play('walkright');
     }
+
     else{
-      //guy.animations.stop();
-      pixelguy.frame=0
+      //pixelguy.animations.stop();
+      if(!calledForHelp){
+      this.key1.onDown.add(callHelp,this);
+    }
+    else this.key1.onDown.remove(callHelp,this);
+      //pixelguy.frame=0
     };
 
 
     //COMPRESSIONS
     if(pixelguy.body.x<(COMPRESSION_AREA_FEET)&&pixelguy.body.x>(COMPRESSION_AREA_HEAD)){
+      if(this.spaceKey.isDown){
+        this.cursors.down.onDown.remove(counterFunction,this);
+        pixelguy.frame= 16;
+        if(this.cursors.down.isDown){
+          checkAwake();
+
+        }
+      }
+      else{
       this.cursors.down.onDown.add(counterFunction,this);
       if(this.cursors.down.isDown){
         pixelguy.frame=1;
@@ -155,10 +165,11 @@ text.anchor.setTo(0.5, 0);
       pixelguy.frame=2;
       victim.frame=1;
     }
-
+}
     }
     else{
       this.cursors.down.onDown.remove(counterFunction,this);
+
       victim.frame=1;
     }
 
@@ -216,6 +227,12 @@ text.anchor.setTo(0.5, 0);
     else{
       resetBreathAreaAnim();
     };
+      if(!checkedSafety){
+        if(!checkOverlap(pixelguy, victim)){
+      this.spaceKey.onDown.add(checkSafety,this);
+    }
+    }
+    else this.spaceKey.onDown.remove(checkSafety,this);
 
     if(correctRatioCBCounter==gameOverConditionWin){
       gameOver();
@@ -223,9 +240,39 @@ text.anchor.setTo(0.5, 0);
 
   }
 
+
 };
+
+function checkAwake(){
+  pixelguy.frame= 17;
+  checkedAwake=true;
+}
+
+function checkOverlap(spriteA, spriteB) {
+
+    var boundsA = spriteA.getBounds();
+    var boundsB = spriteB.getBounds();
+
+    return Phaser.Rectangle.intersects(boundsA, boundsB);
+
+}
+function checkSafety(){
+  checkedSafety=true;
+  pixelguy.animations.play('checkSafety');
+  pixelguy.animations.currentAnim.onComplete.add(function () {
+    pixelguy.frame=0;
+}, this);
+}
+
+function callHelp(){
+  calledForHelp=true;
+  pixelguy.animations.play('callHelp');
+  pixelguy.animations.currentAnim.onComplete.add(function () {	pixelguy.frame=0;}, this);
+}
+
 function checkBreathing(){
   pixelguy.frame=5;
+  checkedBreathing=true;
 }
 function counterFunction(){
   if (breathCount==2&&compressionCountOK){
@@ -272,6 +319,7 @@ timerText="";
   compressionCount++;
   //DEBUGTEXT  text.setText("- You have pushed -\n" + compressionCount + " times !\n" + timerText+"\n"+correctRatioCB+"\n"+correctRatioCBCounter);
   text.setText(compressionCount+" : ");
+
 };
 
 function breathFunction(){
@@ -317,5 +365,5 @@ function restart(){
 }
 
 
-game.state.add('GameState', GameState);
-game.state.start('GameState')
+//game.state.add('GameState', GameState);
+//game.state.start('GameState')
