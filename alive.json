@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "alive10000.png",
+	"frame": {"x":0,"y":0,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+{
+	"filename": "alive20000.png",
+	"frame": {"x":32,"y":0,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "alive.png",
+	"format": "RGBA8888",
+	"size": {"w":64,"h":32},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:26ebf86a1264eef0c730eda090ce139d:9f38d685b64b07df98f9c0c1bbb36cf9:19c57791c6d775a1f3c3a9cf2ce63cb0$"
+}
+}

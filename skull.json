@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "skull10000.png",
+	"frame": {"x":0,"y":0,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+{
+	"filename": "skull20000.png",
+	"frame": {"x":32,"y":0,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "skull.png",
+	"format": "RGBA8888",
+	"size": {"w":64,"h":32},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:63eae75f4f9b890b6fbeae7ab30802d0:cd4c042b7828489c0bc7440b0ea9a933:443f28002a1aabbdca7c6a666d0850c5$"
+}
+}

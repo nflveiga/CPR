@@ -7,6 +7,7 @@
 		<title>Learn Game Development at ZENVA.com</title>
 		<script type="text/javascript" src="js/startScreenState.js"></script>
 		<script type="text/javascript" src="js/gameplayState.js"></script>
+		<script type="text/javascript" src="js/gameOverState.js"></script>
 		<script type="text/javascript" src="js/phaser.js"></script>
 		<style>
 		  body {
@@ -22,6 +23,7 @@
 var game = new Phaser.Game(640, 360,Phaser.AUTO);
 game.state.add('startScreenState', MyGame.startScreenState);
 game.state.add('gameplayState', MyGame.gameplayState);
+game.state.add('gameOverState', MyGame.gameOverState);
 game.state.start('startScreenState');
 
 </script>
